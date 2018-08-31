@@ -1,4 +1,6 @@
-
+body {
+  font-weight: 530;
+}
 
 .boxes-container {
   display: grid;
@@ -15,10 +17,6 @@
   background-color: #3E6259;
   grid-column: 1/3;
   grid-row: 1/1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
 }
 
 .box2 {
@@ -27,7 +25,6 @@
 
 .box3 {
   background-color: #212922;
-
 }
 
 .box4 {
@@ -63,19 +60,46 @@
   background-image: url("boy-child-cute-969373.jpg");
   grid-column: 4/4;
   grid-row: 1/4;
-  
 }
 
 .box {
- display: flex;
- align-items: center;
- justify-content: center;
- flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+  /*margin: 1px;*/
+}
+
+.box:hover {
+  opacity: .95;
+
 }
 
  i {
-  margin-bottom: 10px;
+  margin-bottom: 18px;
 
+
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-weight: 800;
+  margin-right: auto;
+  padding-left: 20px;
+  font-size: 25px;
+  font-family: 'Roboto', sans-serif;
+}
+
+p {
+  margin: 5px;
+  margin-right: auto;
+  padding-left: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.right-button {
+  
 }
 
 
