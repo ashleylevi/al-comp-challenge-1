@@ -1,87 +1,102 @@
-body {
-  font-weight: 530;
-}
 
 .boxes-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 2fr;
   grid-template-rows: 1fr 1fr 1fr;
   color: white;
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
   width: 100vw;
   height: 100vh;
+  grid-gap: 1px;
+  grid-template-areas:
+      "box1  box1  box2 box9"
+      "box3  box4  box5 box9"
+      "box6  box7  box8 box9";
 }
 
-
 .box1 {
-  background-color: #3E6259;
+  background-color: #B9B9BE;
   grid-column: 1/3;
   grid-row: 1/1;
+  display: inline;
 }
 
 .box2 {
-  background-color: #AEF6C7;
+  background-color: #BBD5E2;
+  grid-column: 3/3;
+  grid-row: 1/1; 
 }
 
 .box3 {
-  background-color: #212922;
+  background-color: #698A9D;
+  grid-column: 1/1;
+  grid-row: 2/2;
 }
 
 .box4 {
-  background-color: #144149;
+  background-color: #EDB964;
+  grid-column: 2/2;
+  grid-row: 2/2;
 }
 
 .box5 {
-  background-color: #3E6259;
+  background-color: #B9B9BE;
+  grid-column: 3/3;
+  grid-row: 2/2;
 }
 
 .box6 {
-  background-color: #294936;
+  background-color: #737375;
   grid-column: 1/1;
   grid-row: 3/3;
-  
-
 }
+
 .box7 {
-  background-color: #212922;
+  background-color: #698A9D;
   grid-column: 2/2;
-  grid-row: 3/3;
-  
+  grid-row: 3/3;  
 }
 
 .box8 {
-  background-color: #294936;
+  background-color: #737375;
   grid-column: 3/3;
-  grid-row: 3/3;
-  
+  grid-row: 3/3; 
 }
 
 .box9 {
-  background-image: url("boy-child-cute-969373.jpg");
+  background-image: url("andrew-umansky-714774-unsplash.jpg");
   grid-column: 4/4;
   grid-row: 1/4;
+  background-size: cover;
+  justify-content: center;
 }
 
+/*shared styling for all of the boxes*/
 .box {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   font-family: 'Roboto', sans-serif;
-  /*margin: 1px;*/
 }
 
 .box:hover {
-  opacity: .95;
+  opacity: .80;
 
 }
 
+/*icons*/
  i {
   margin-bottom: 18px;
-
-
 }
 
+.fa-chevron-circle-left, .fa-chevron-circle-right {
+  align-self: center;
+  margin: 20px;
+}
+
+/*text in box1*/
 h1 {
   margin-bottom: 20px;
   font-weight: 800;
@@ -91,16 +106,182 @@ h1 {
   font-family: 'Roboto', sans-serif;
 }
 
-p {
+.p1 {
   margin: 5px;
   margin-right: auto;
   padding-left: 20px;
   font-family: 'Roboto', sans-serif;
 }
 
-.right-button {
-  
+/*container for resume and contact buttons*/
+.buttons-box1 {
+  display: flex;
+  justify-content: start;
+  margin-right: auto;
+  height: 20%;
+  margin-left: 5%;
+  margin-top: 5%;
 }
+
+.resume {
+  border: solid 2px white;
+  margin-right: 5%;
+  padding-top: 15px;
+  padding-right: 20px;
+}
+
+.contact {
+  border: solid 2px white;
+  padding-top: 15px;
+  padding-right: 20px;
+}
+  
+.fa-download {
+  margin-right: 5px;
+  padding-left: 20px;
+}
+
+.fa-info{
+  margin-right: 5px;
+  padding-left: 20px;
+}
+
+/*container for icons on background image*/
+div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;  
+}
+
+/*query for iphone 5*/
+@media screen and (max-width: 600px) {
+  
+.boxes-container {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+      "box1  box1  box2"
+      "box3  box4  box5"
+      "box6  box7  box8"
+      "box9  box9  box9";
+  }
+
+.box9 {
+  grid-column: 1/4;
+  grid-row: 4/4;
+  height: 600px;
+  width:100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.box3, .box4, .box5, 
+.box6, .box7, .box8 {
+  height: 180px;
+}
+
+i {
+  padding: 10px;
+}
+
+h1 {
+  padding-top: 20px;
+  padding-left: 10px;
+  margin-bottom: 5px;
+}
+
+.p1 {
+  margin-right: 5px;
+  padding-left: 10px;
+  padding-top: 2px;
+  font-size: 14px;
+}
+
+.buttons-box1 {
+  padding-bottom: 20px;
+  margin-right: 6px;
+}
+
+.resume {
+  border: solid 2px white;
+  padding-top: 0px;
+  padding-right: 0px;
+  margin-right: 1px;
+  width: 100px;
+  height: 40px;
+}
+
+.contact {
+  border: solid 2px white;
+  padding-top: 0px;
+  padding-right: 0px;
+  margin-left: 0px;
+  width: 100px;
+  height: 40px;
+}
+
+.fa-download {
+  margin-right: 1px;
+  padding-left: 5px;
+}
+
+.fa-info{
+  margin-right: 1px;
+  padding-left: 5px;
+}
+
+}
+
+@media only screen and (max-width: 1025px) and (min-width: 768px) 
+and (orientation: portrait) {
+
+.boxes-container {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+      "box1  box1  box2"
+      "box3  box4  box5"
+      "box6  box7  box8"
+      "box9  box9  box9";
+  }
+
+.box9 {
+  grid-column: 1/4;
+  grid-row: 4/4;
+  height: 600px;
+  width:100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.box3, .box4, .box5, 
+.box6, .box7, .box8 {
+  height: 180px;
+}
+
+i {
+  padding: 10px;
+}
+
+h1 {
+  margin-top: 25px;
+}
+
+.resume {
+  height: 40px;
+  padding-top: 5px;
+  margin-bottom: 20px;
+}
+
+.contact {
+  height: 40px;
+  padding-top: 5px;
+  margin-bottom: 20px;
+}
+
+}
+
 
 
 
