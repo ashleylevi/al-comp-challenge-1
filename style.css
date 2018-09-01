@@ -15,7 +15,6 @@
       "box6  box7  box8 box9";
 }
 
-
 .box1 {
   background-color: #B9B9BE;
   grid-column: 1/3;
@@ -26,8 +25,7 @@
 .box2 {
   background-color: #BBD5E2;
   grid-column: 3/3;
-  grid-row: 1/1;
-  margin-right: 1px;
+  grid-row: 1/1; 
 }
 
 .box3 {
@@ -44,7 +42,6 @@
 
 .box5 {
   background-color: #B9B9BE;
-  margin-right: 1px;
   grid-column: 3/3;
   grid-row: 2/2;
 }
@@ -53,33 +50,29 @@
   background-color: #737375;
   grid-column: 1/1;
   grid-row: 3/3;
-  
-
 }
+
 .box7 {
   background-color: #698A9D;
   grid-column: 2/2;
-  grid-row: 3/3;
-  
+  grid-row: 3/3;  
 }
 
 .box8 {
   background-color: #737375;
   grid-column: 3/3;
-  grid-row: 3/3;
-  margin-right: 1px;
-  
+  grid-row: 3/3; 
 }
 
 .box9 {
   background-image: url("andrew-umansky-714774-unsplash.jpg");
   grid-column: 4/4;
   grid-row: 1/4;
-  
+  background-size: cover;
   justify-content: center;
-
 }
 
+/*shared styling for all of the boxes*/
 .box {
   display: flex;
   align-items: center;
@@ -93,9 +86,9 @@
 
 }
 
+/*icons*/
  i {
   margin-bottom: 18px;
-
 }
 
 .fa-chevron-circle-left, .fa-chevron-circle-right {
@@ -103,6 +96,7 @@
   margin: 20px;
 }
 
+/*text in box1*/
 h1 {
   margin-bottom: 20px;
   font-weight: 800;
@@ -119,48 +113,51 @@ h1 {
   font-family: 'Roboto', sans-serif;
 }
 
+/*container for resume and contact buttons*/
+.buttons-box1 {
+  display: flex;
+  justify-content: start;
+  margin-right: auto;
+  height: 20%;
+  margin-left: 5%;
+  margin-top: 5%;
+}
+
 .resume {
   border: solid 2px white;
+  margin-right: 5%;
   padding-top: 15px;
-  width: 130px;
-  height: 30px;
-  text-align: center;
- /* display: inline;*/
+  padding-right: 20px;
 }
 
 .contact {
   border: solid 2px white;
   padding-top: 15px;
-  width: 130px;
-  height: 30px;
-  text-align: center;
+  padding-right: 20px;
+}
+  
+.fa-download {
+  margin-right: 5px;
+  padding-left: 20px;
 }
 
+.fa-info{
+  margin-right: 5px;
+  padding-left: 20px;
+}
+
+/*container for icons on background image*/
 div {
-  /*padding: 0 20px 0 20px;*/
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: space-between;
-  
-
-}
-  
-.buttons-box1 {
-  display: flex;
-  justify-content: space-between;
-  width: 60%;
-  height: 20%;
-  margin-right: auto;
-  margin-top: 10px;
-  padding-left: 25px;
-
+  justify-content: space-between;  
 }
 
-@media screen and (max-width: 420px) {
+/*query for iphone 5*/
+@media screen and (max-width: 600px) {
   
-  .boxes-container {
-
+.boxes-container {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-template-areas:
@@ -170,16 +167,117 @@ div {
       "box9  box9  box9";
   }
 
-  .box9 {
+.box9 {
   grid-column: 1/4;
   grid-row: 4/4;
   height: 600px;
   width:100%;
   background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.box3, .box4, .box5, 
+.box6, .box7, .box8 {
+  height: 180px;
+}
+
+i {
+  padding: 10px;
+}
+
+h1 {
+  padding-top: 20px;
+  padding-left: 10px;
+  margin-bottom: 5px;
+}
+
+.p1 {
+  margin-right: 5px;
+  padding-left: 10px;
+  padding-top: 2px;
+  font-size: 14px;
+}
+
+.buttons-box1 {
+  padding-bottom: 20px;
+  margin-right: 6px;
+}
+
+.resume {
+  border: solid 2px white;
+  padding-top: 0px;
+  padding-right: 0px;
+  margin-right: 1px;
+  width: 100px;
+  height: 40px;
+}
+
+.contact {
+  border: solid 2px white;
+  padding-top: 0px;
+  padding-right: 0px;
+  margin-left: 0px;
+  width: 100px;
+  height: 40px;
+}
+
+.fa-download {
+  margin-right: 1px;
+  padding-left: 5px;
+}
+
+.fa-info{
+  margin-right: 1px;
+  padding-left: 5px;
+}
 
 }
 
-  .boxes {
+@media only screen and (max-width: 1025px) and (min-width: 768px) 
+and (orientation: portrait) {
+
+.boxes-container {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+      "box1  box1  box2"
+      "box3  box4  box5"
+      "box6  box7  box8"
+      "box9  box9  box9";
+  }
+
+.box9 {
+  grid-column: 1/4;
+  grid-row: 4/4;
+  height: 600px;
+  width:100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.box3, .box4, .box5, 
+.box6, .box7, .box8 {
+  height: 180px;
+}
+
+i {
+  padding: 10px;
+}
+
+h1 {
+  margin-top: 25px;
+}
+
+.resume {
+  height: 40px;
+  padding-top: 5px;
+  margin-bottom: 20px;
+}
+
+.contact {
+  height: 40px;
+  padding-top: 5px;
+  margin-bottom: 20px;
 }
 
 }
