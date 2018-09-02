@@ -16,5 +16,5 @@
 
 ## Original Comp
 
-![alt text](https://farm2.staticflickr.com/1887/43508969145_28aba66ad4_k.jpg" width="2048" height="1223)
+![alt text](https://farm2.staticflickr.com/1887/43508969145_28aba66ad4_k.jpg)
 
