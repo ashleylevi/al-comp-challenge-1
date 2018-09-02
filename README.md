@@ -14,7 +14,9 @@
 * Grid
 * Flexbox
 
-## Original Comp
+### Original Comp
 
 ![alt text](https://farm2.staticflickr.com/1887/43508969145_28aba66ad4_k.jpg)
+
+### My Version
 
