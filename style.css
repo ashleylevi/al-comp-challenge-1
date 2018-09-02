@@ -162,7 +162,7 @@ h1 {
 }*/
 
 /*query for iphone 5*/
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 600px) {
   
 .boxes-container {
   grid-template-columns: 1fr 1fr 1fr;
@@ -301,16 +301,23 @@ h1 {
 }
 
 .resume {
-  height: 4rem;
+  font-size: 1.2rem;
+  height: 2rem;
 }
 
 .contact {
-  height: 4rem;
+  font-size: 1.2rem;
+  height: 2rem;
 }
 
 #two, #three, #four, 
 #five, #six, #seven, #eight {
-  font-size: 4em;
+  font-size: 5em;
+  margin-bottom: 1.5rem;
+}
+
+.icon-text {
+  font-size: 1.3em;
 }
 }
 
