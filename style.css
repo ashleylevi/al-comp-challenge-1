@@ -148,12 +148,7 @@ h1 {
   cursor: pointer; 
 }
 
-.fa-download {
-  margin-right: .5rem;
-  padding-left: 1rem;
-}
-
-.fa-info {
+.fa-download, .fa-info {
   margin-right: .5rem;
   padding-left: 1rem;
 }
@@ -309,6 +304,7 @@ h1 {
 .circle1, .circle2, .circle3 {
   padding: .1rem;
 }
+
 }
 
 /*media query for large screens*/
@@ -322,7 +318,7 @@ h1 {
   font-size: 1.3rem;
 }
 
-.resume {
+.resume, {
   font-size: 1.2rem;
   height: 2rem;
 }
